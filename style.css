@@ -1,0 +1,104 @@
+/* Classe générale */
+*{
+    font-family: "Roboto", Arial, sans-serif;
+    margin:0;
+}
+
+.center_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding_element{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(190, 187, 187);
+    padding: 20px 0px;
+    
+}
+
+/* Logo */
+
+.logo{
+    font-size: 32px;
+    font-family: "Shrikhand", Arial, sans-serif;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgba(182, 68, 68, 0.25);
+}
+
+/* Location */
+
+.container_location{
+    background-color: rgb(234 234 234);
+}
+
+.location_icon{
+    height: auto;
+    width: auto;
+    padding-right:15px;
+
+}
+
+.location_name{
+    font-size: 16px;
+}
+
+/* Description application */
+
+.container_description{
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(247 247 247);
+    padding: 40px 0px;
+}
+
+.btn_explore{
+    border-radius: 40px;
+    padding: 20px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    border: 1px solid linear-gradient(#FF79DA, #9356DC);
+    color: white;
+}
+
+/* Function */
+
+.container_functioning{
+    display: flex;
+    flex-direction: column;
+}
+
+.fonction_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    padding: 40px 0px;
+    background-color: rgb(247 247 247);
+    width: 400px;
+    border-radius: 40px;
+
+}
+
+/* .icon_btn_function{
+
+} */
+
+.icon_number{
+    background-color:#9356DC;
+    color: white;
+    border-radius: 4Opx;
+}
+
