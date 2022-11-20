@@ -1,0 +1,24 @@
+/* Footer */
+
+footer{
+    background-color: rgb(53 53 53);
+    color: white;
+    padding: 25px;
+    line-height: 2;
+    .logo_footer{
+        font-family: "Shrikhand", Arial, sans-serif;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    .footer_nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .icon_footer{
+            width: 35px;
+        }
+        .text_footer{
+            justify-content: flex-start;
+        }
+    }
+}

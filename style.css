@@ -1,104 +1,217 @@
-/* Classe générale */
-*{
-    font-family: "Roboto", Arial, sans-serif;
-    margin:0;
-}
-
-.center_element{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.padding_element{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-h1{
-    font-weight: bold;
-    font-size: 1.8em;
-    text-align: center;
-}
-
-h2{
-    font-size: 30px;
-    text-align: center;
-    color: rgb(190, 187, 187);
-    padding: 20px 0px;
-    
-}
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Logo */
+header {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+header .logo {
+  font-size: 32px;
+  font-family: "Shrikhand", Arial, sans-serif;
+  text-align: center;
+}
 
-.logo{
-    font-size: 32px;
-    font-family: "Shrikhand", Arial, sans-serif;
-    text-align: center;
-    box-shadow: 0 0 0.5rem rgba(182, 68, 68, 0.25);
+/* Footer */
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 25px;
+  line-height: 2;
+}
+footer .logo_footer {
+  font-family: "Shrikhand", Arial, sans-serif;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+footer .footer_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer_nav .icon_footer {
+  width: 35px;
+}
+footer .footer_nav .text_footer {
+  justify-content: flex-start;
+}
+
+/* Classe générale */
+* {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.center_element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding_element {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(190, 187, 187);
+  padding: 20px 0px;
 }
 
 /* Location */
-
-.container_location{
-    background-color: rgb(234 234 234);
+.container_location {
+  background-color: rgb(234, 234, 234);
 }
-
-.location_icon{
-    height: auto;
-    width: auto;
-    padding-right:15px;
-
+.container_location .location_icon {
+  height: auto;
+  width: auto;
+  padding-right: 15px;
 }
-
-.location_name{
-    font-size: 16px;
+.container_location .location_name {
+  font-size: 16px;
 }
 
 /* Description application */
-
-.container_description{
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: rgb(247 247 247);
-    padding: 40px 0px;
+.container_description {
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(247, 247, 247);
+  padding: 40px 0px;
 }
-
-.btn_explore{
-    border-radius: 40px;
-    padding: 20px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    border: 1px solid linear-gradient(#FF79DA, #9356DC);
-    color: white;
+.container_description .btn_explore {
+  border-radius: 40px;
+  padding: 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 1px solid linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  box-shadow: 18px 17px 13px -16px rgb(193, 201, 198);
 }
 
 /* Function */
-
-.container_functioning{
-    display: flex;
-    flex-direction: column;
+.container_functioning {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.container_functioning .container_function_card .fonction_card {
+  position: relative;
+  margin: 20px;
+  padding: 40px 0px;
+  background-color: rgb(247, 247, 247);
+  width: auto;
+  border-radius: 40px;
+  box-shadow: 18px 17px 13px -16px rgb(193, 201, 198);
+}
+.container_functioning .container_function_card .fonction_card .icon_number {
+  position: absolute;
+  left: -1em;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #9356DC;
+  color: white;
+}
+.container_functioning .container_function_card .fonction_card .icon_btn_function {
+  position: absolute;
+  left: 30px;
+}
+.container_functioning .container_function_card .fonction_card .btn_title {
+  padding-left: 60px;
 }
 
-.fonction_card{
+@media only screen and (min-width: 860px) {
+  .container_function_card {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin: 20px auto;
-    padding: 40px 0px;
-    background-color: rgb(247 247 247);
-    width: 400px;
-    border-radius: 40px;
-
+    justify-content: space-between;
+  }
+  .container_function_card .fonction_card {
+    flex: 1 1 auto;
+  }
+}
+/* Restaurant */
+.container_restaurant {
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+}
+.container_restaurant h1 {
+  margin-bottom: 20px;
 }
 
-/* .icon_btn_function{
-
-} */
-
-.icon_number{
-    background-color:#9356DC;
-    color: white;
-    border-radius: 4Opx;
+.restaurant_card {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.restaurant_card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
+.container_img_new {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.container_img_new .new {
+  position: absolute;
+  background-color: rgb(155, 225, 208);
+  color: rgb(3, 131, 98);
+  margin: 25px 25px 0px 0px;
+  padding: 5px;
+}
+
+.restaurant_info {
+  position: relative;
+  margin: 15px;
+}
+.restaurant_info .restaurant_description .restaurant_name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.restaurant_info .fa-heart {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.33em;
+}
+.restaurant_info .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.restaurant_info:hover .fa-solid {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 860px) {
+  .container_two_restaurants_card {
+    display: flex;
+    flex-direction: row;
+  }
+  .container_two_restaurants_card .restaurant_card {
+    flex: 1;
+    margin: 0px 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
