@@ -1,0 +1,10 @@
+
+/* Mixin */
+
+@mixin button-shadow{
+    box-shadow: 18px 17px 13px -16px rgba(193,201,198,1);
+}
+
+@mixin zoom-button{
+    transform: scale(1.02);
+}

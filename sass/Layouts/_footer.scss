@@ -1,23 +1,25 @@
+@use "../Utils/colors";
+
 /* Footer */
 
 footer{
-    background-color: rgb(53 53 53);
+    background-color: colors.$darkgrey;
     color: white;
     padding: 25px;
     line-height: 2;
-    .logo_footer{
+    & .logo_footer{
         font-family: "Shrikhand", Arial, sans-serif;
         margin-bottom: 15px;
         font-size: 22px;
     }
-    .footer_nav{
+    & .footer_nav{
         display: flex;
         flex-direction: row;
         align-items: center;
-        .icon_footer{
+        & .icon_footer{
             width: 35px;
         }
-        .text_footer{
+        & .text_footer{
             justify-content: flex-start;
         }
     }
