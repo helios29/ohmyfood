@@ -8,51 +8,48 @@
     & h1{
         margin-bottom: 20px;
     }
-    & .container_two_restaurants_card .restaurant_card {
-        margin-bottom:20px;
-        background-color:white;
-        border-radius: 20px;
-        overflow: hidden;
-        & .container_img_new{
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            & .new{
-                position:absolute;
-                background-color: colors.$newBackgroundColor;
-                color: colors.$newFontStyle;
-                margin: 25px 25px 0px 0px;
-                padding: 5px;
+    & .container_restaurant_cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width: 1000px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        & .restaurant_card {
+            margin-bottom:20px;
+            background-color:white;
+            border-radius: 20px;
+            overflow: hidden;
+            & .restaurant_info{
+                position: relative;
+                margin: 15px;
+                & .restaurant_description .restaurant_name{
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                & .fa-heart{
+                    position: absolute;
+                    right:1em;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 1.33em;
+                }
+                & .fa-solid{
+                    color:transparent;
+                    background-image: linear-gradient(#FF79DA, #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 500ms ease;
+                    cursor: pointer;
+                }
+                &:hover .fa-solid{
+                    opacity:1;
+                }
             }
         }
-        & .restaurant_info{
-            position: relative;
-            margin: 15px;
-            & .restaurant_description .restaurant_name{
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
-            & .fa-heart{
-                position: absolute;
-                right:1em;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 1.33em;
-            }
-            & .fa-solid{
-                color:transparent;
-                background-image: linear-gradient(#FF79DA, #9356DC);
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 500ms ease;
-                cursor: pointer;
-            }
-            &:hover .fa-solid{
-                opacity:1;
-            }
-        }
+
     }
 }
 
@@ -62,9 +59,26 @@ img{
     object-fit: cover;
 }
 
+.new{
+    position: relative;
+    &::before{
+           content: "Nouveau";
+           position: absolute;
+           height: 2rem;
+           width: 5rem;
+           background-color: colors.$newBackgroundColor;
+           color: darken(colors.$newBackgroundColor, 50%);
+           right: 1rem;
+           top: 1rem;
+           display: grid;
+           place-items: center;
+       }
+}
+
+
+
 @media only screen and (min-width:860px){
-        
-    .container_two_restaurants_card{
+    .container_restaurant_cards {
         display: flex;
         flex-direction: row;
         & .restaurant_card{
