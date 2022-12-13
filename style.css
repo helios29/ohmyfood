@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Logo */
 header {
@@ -159,6 +159,7 @@ footer .footer_nav .text_footer {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.33em;
+  color: black;
 }
 .container_restaurant .container_restaurant_cards .restaurant_card .restaurant_info .fa-solid {
   color: transparent;
@@ -171,6 +172,10 @@ footer .footer_nav .text_footer {
 }
 .container_restaurant .container_restaurant_cards .restaurant_card .restaurant_info:hover .fa-solid {
   opacity: 1;
+}
+
+.container_restaurant_cards a {
+  color: black;
 }
 
 img {
@@ -205,6 +210,161 @@ img {
     margin: 0px 5px;
   }
 }
+html, body {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#main-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  align-items: center;
+}
+
+* {
+  font-family: "Shrikhand";
+}
+
+header {
+  width: 100%;
+}
+
+.fa-arrow-left-long {
+  position: absolute;
+  padding-left: 20px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: black;
+}
+
+.font_img_restaurant {
+  width: 100%;
+  height: 600px;
+}
+
+.restaurant_menu {
+  width: 90%;
+  margin-top: -4rem;
+  border-radius: 30px 30px 0 0;
+  padding: 0px 20px;
+  background-color: rgb(247, 247, 247);
+}
+.restaurant_menu .restaurant_name {
+  position: relative;
+}
+.restaurant_menu .restaurant_name .fa-heart {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.33em;
+  color: black;
+}
+.restaurant_menu .restaurant_name .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.restaurant_menu .restaurant_name:hover .fa-solid {
+  opacity: 1;
+}
+.restaurant_menu .restaurant_name p {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  position: relative;
+}
+.restaurant_menu .restaurant_name .menu-board {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant_menu .menu-board .menu {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant_menu .menu-board .menu h4 {
+  flex: 1;
+  margin: 5px 0px;
+  margin-right: 20px;
+  position: relative;
+}
+.restaurant_menu .menu-board .menu h4 ::after {
+  position: absolute;
+  top: 1.4rem;
+  content: "";
+  width: 6%;
+  padding: 2px;
+  background-color: rgb(155, 225, 208);
+}
+.restaurant_menu .menu-board .menu .menu-card {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 5px 20px 15px 0px;
+  min-width: 200px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+.restaurant_menu .menu-board .menu .menu-card .dish-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+  height: 100%;
+}
+.restaurant_menu .menu-board .menu .menu-card .dish-title .dish {
+  font-weight: bold;
+}
+.restaurant_menu .menu-board .menu .menu-card .dish-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-weight: bold;
+}
+.restaurant_menu .menu-board .menu .menu-card .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  margin-right: -30px;
+  transition: margin 1s ease;
+  background-color: rgb(155, 225, 208);
+}
+.restaurant_menu .menu-board .menu .menu-card :hover .check {
+  margin-right: 0;
+}
+
+.button_order {
+  border-radius: 40px;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: 1px solid linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  box-shadow: 18px 17px 13px -16px rgb(193, 201, 198);
+  margin: 30px 0 40px 0;
+  padding: 0 20px;
+  max-width: 140px;
+}
+.button_order:hover {
+  transform: scale(1.02);
+}
+
+footer {
+  padding-left: 11%;
+}
+
 /* Classe générale */
 * {
   font-family: "Roboto", Arial, sans-serif;

@@ -8,3 +8,38 @@
 @mixin zoom-button{
     transform: scale(1.02);
 }
+
+@mixin heart-transition {
+    & .fa-heart{
+        position: absolute;
+        right:1em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.33em;
+        color: black;
+    }
+    & .fa-solid{
+        color:transparent;
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+    &:hover .fa-solid{
+        opacity:1;
+    }
+}
+
+@mixin btn{
+    border-radius: 40px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    border: 1px solid linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    @include button-shadow;
+    &:hover{
+        @include zoom-button;
+    }
+}
