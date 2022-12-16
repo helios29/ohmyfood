@@ -18,6 +18,10 @@
         @include mixin.button-shadow;
         &:hover{
             @include mixin.zoom-button;
+            background-color: rgb(245, 237, 254);
+            i::before{
+                color: purple;
+            }
         }
         & .icon_number{
             position: absolute;
@@ -39,7 +43,6 @@
         }
         & .btn_title{
             padding-left: 60px;
-
         }
 
     }

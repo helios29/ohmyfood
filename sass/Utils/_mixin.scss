@@ -36,10 +36,16 @@
     border-radius: 40px;
     padding: 20px;
     background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-    border: 1px solid linear-gradient(#FF79DA, #9356DC);
     color: white;
     @include button-shadow;
     &:hover{
         @include zoom-button;
     }
+}
+
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
 }
