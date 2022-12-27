@@ -1,14 +1,11 @@
 /* Logo */
 
-header{
-    box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
-    position: relative;
-    & .logo{
-        font-size: 32px;
-        font-family: "Shrikhand", Arial, sans-serif;
-        text-align: center;
-    }
+header {
+  box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
+  position: relative;
+  & .logo {
+    font-size: 32px;
+    font-family: "Shrikhand", Arial, sans-serif;
+    text-align: center;
+  }
 }
-
-
-
